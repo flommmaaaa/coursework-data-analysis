@@ -1,4 +1,3 @@
-import os
 import matplotlib.pyplot as plt
 import pandas as pd
 import seaborn as sns
@@ -7,13 +6,7 @@ import seaborn as sns
 # ЭТАП 1: Загрузка и первичное знакомство
 # ==========================================
 # Загрузка локального файла данных, соответствующего кейсу TUV-NEL
-for p in ["data/timeseries/tuv_nel_data.csv", "../data/timeseries/tuv_nel_data.csv", "tuv_nel_data.csv"]:
-    if os.path.exists(p):
-        data_path = p
-        break
-else:
-    data_path = "tuv_nel_data.csv"
-df = pd.read_csv(data_path)
+df = pd.read_csv("tuv_nel_data.csv")
 
 # Выводим общую информацию о структуре в консоль
 print("=" * 60)

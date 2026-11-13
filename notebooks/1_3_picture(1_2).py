@@ -1,16 +1,9 @@
-import os
 import matplotlib.pyplot as plt
 import pandas as pd
 import seaborn as sns
 
 # Загрузка сохраненного датасета из локальной папки проекта
-for p in ["data/tabular/insurance.csv", "../data/tabular/insurance.csv", "insurance.csv"]:
-    if os.path.exists(p):
-        data_path = p
-        break
-else:
-    data_path = "insurance.csv"
-df = pd.read_csv(data_path)
+df = pd.read_csv("insurance.csv")
 
 # Настройка общего уникального стиля графиков
 sns.set_theme(style="whitegrid")  # Добавляем аккуратную сетку на фон

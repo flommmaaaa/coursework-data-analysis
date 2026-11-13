@@ -1,16 +1,9 @@
-import os
 import matplotlib.pyplot as plt
 import pandas as pd
 import seaborn as sns
 
 # 1. Загрузка датасета временного ряда
-for p in ["data/timeseries/tuv_nel_data.csv", "../data/timeseries/tuv_nel_data.csv", "tuv_nel_data.csv"]:
-    if os.path.exists(p):
-        data_path = p
-        break
-else:
-    data_path = "tuv_nel_data.csv"
-df = pd.read_csv(data_path)
+df = pd.read_csv("tuv_nel_data.csv")
 
 # Настройка уникального и чистого стиля для анализа шумов
 sns.set_theme(style="whitegrid")

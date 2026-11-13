@@ -24,17 +24,7 @@ except LookupError:
 # ==========================================
 # ШАГ 0: Чтение локального датасета
 # ==========================================
-for p in ["data/text/premise_question_answer4.txt", "../data/text/premise_question_answer4.txt", "premise_question_answer4.txt"]:
-    if os.path.exists(p):
-        local_filename = p
-        break
-else:
-    for p in ["data/text/premise_question_answer4.txt", "../data/text/premise_question_answer4.txt", "premise_question_answer4.txt"]:
-    if os.path.exists(p):
-        local_filename = p
-        break
-else:
-    local_filename = "premise_question_answer4.txt"
+local_filename = "premise_question_answer4.txt"
 print("Читаем локальный датасет обращений...")
 
 

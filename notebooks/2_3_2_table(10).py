@@ -1,14 +1,7 @@
-import os
 import pandas as pd
 
 # Загрузка нашего датасета временного ряда
-for p in ["data/timeseries/tuv_nel_data.csv", "../data/timeseries/tuv_nel_data.csv", "tuv_nel_data.csv"]:
-    if os.path.exists(p):
-        data_path = p
-        break
-else:
-    data_path = "tuv_nel_data.csv"
-df = pd.read_csv(data_path)
+df = pd.read_csv("tuv_nel_data.csv")
 
 # ==========================================
 # ЭТАП 3: Статистический анализ
